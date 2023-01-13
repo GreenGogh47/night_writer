@@ -1,6 +1,6 @@
 require './lib/night_writer'
 
-RSpec.describe Budget do
+RSpec.describe NightWriter do
   before do
     @night_writer = NightWriter.new
   end

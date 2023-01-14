@@ -8,13 +8,14 @@ RSpec.describe NightWriter do
     @night_writer = NightWriter.new
   end
 
-  xdescribe '#initialize' do
+  describe '#initialize' do
     it 'exists' do
       expect(@night_writer).to be_a(NightWriter)
     end
-    
-    it 'has attributes' do
 
+    it 'has attributes' do
+      expect(@file_in).to eq(ARGV[0])
+      expect(@file_out).to eq(ARGV[1])
     end
   end
 end

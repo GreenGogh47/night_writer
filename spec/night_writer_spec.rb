@@ -14,8 +14,8 @@ RSpec.describe NightWriter do
     end
 
     it 'has attributes' do
-      expect(@file_in).to eq(ARGV[0])
-      expect(@file_out).to eq(ARGV[1])
+      expect(@night_writer.file_in).to eq(ARGV[0])
+      expect(@night_writer.file_out).to eq(ARGV[1])
     end
   end
 end

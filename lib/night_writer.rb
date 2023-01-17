@@ -18,7 +18,3 @@ class NightWriter
     puts "Created #{@file_out} contains #{text_in.length} characters"
   end
 end
-
-# night_writer = NightWriter.new
-# night_writer.run
-# These two lines must be commented out for tests to run correctly.

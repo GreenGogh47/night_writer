@@ -4,6 +4,8 @@ RSpec.describe Translator do
 
   before do
     @translator = Translator.new
+    @input = File.read('./message50.txt')
+    @output = File.read('./braille.txt')
   end
 
   describe '#initialize' do
@@ -21,6 +23,7 @@ RSpec.describe Translator do
 
   describe '#translate' do
     it "translates a character from english to braille" do
+      expect(@translator.translate(@input)).to eq(@output)
       expect(@translator.translate("a")).to eq("0.\n..\n..")
       expect(@translator.translate("b")).to eq("0.\n0.\n..")
       expect(@translator.translate("ab")).to eq("0.0.\n..0.\n....")

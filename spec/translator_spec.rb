@@ -10,13 +10,6 @@ RSpec.describe Translator do
     it 'exists' do
       expect(@translator).to be_a(Translator)
     end
-
-    it 'has attributes' do
-      expect(@file_in).to eq(ARGV[0])
-      expect(@file_out).to eq(ARGV[1])
-    end
-
-    # How do I test the runner?
   end
 
   describe '#translate_to_braille' do

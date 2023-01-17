@@ -17,4 +17,14 @@ RSpec.describe NightWriter do
       expect(@night_writer.file_out).to eq('./fixture/braille_test.txt')
     end
   end
+
+  describe '#run' do
+    it 'translates and' do
+      # look up methods to make sure that message50 is blank when I start
+      # the previous test run could have populated that fixture file
+      # call @night_reader.run
+      # from there we should be able to open message50
+      # verify it contains the translated message
+    end
+  end
 end

@@ -19,6 +19,8 @@ class Translator < Dictionary
 
   def translate_from_braille(braille)
     array = []
+
+    # Multiple lines of braille
     braille.split do |row|
       array << row.chars.each_slice(2).map(&:join)
     end

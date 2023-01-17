@@ -16,7 +16,7 @@ RSpec.describe Translator do
       expect(@file_out).to eq(ARGV[1])
     end
 
-    # How do I test if it's properly inheriting the prior class?
+    # How do I test the runner?
   end
 
   describe '#translate_to_braille' do

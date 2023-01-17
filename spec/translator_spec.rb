@@ -23,10 +23,10 @@ RSpec.describe Translator do
 
   describe '#translate' do
     it "translates a character from english to braille" do
-      expect(@translator.translate(@input)).to eq(@output)
-      expect(@translator.translate("a")).to eq("0.\n..\n..")
-      expect(@translator.translate("b")).to eq("0.\n0.\n..")
-      expect(@translator.translate("ab")).to eq("0.0.\n..0.\n....")
+      expect(@translator.translate_to_braille(@input)).to eq(@output)
+      expect(@translator.translate_to_braille("a")).to eq("0.\n..\n..")
+      expect(@translator.translate_to_braille("b")).to eq("0.\n0.\n..")
+      expect(@translator.translate_to_braille("ab")).to eq("0.0.\n..0.\n....")
     end
   end
 end

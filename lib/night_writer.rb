@@ -15,7 +15,7 @@ class NightWriter
     text_in = File.read(@file_in)
     character_total = text_in.chars.count
     puts "Created #{@file_out} contains #{character_total} characters"
-    braille_text = @translator.translate(text_in)
+    braille_text = @translator.translate_to_braille(text_in)
     File.write(@file_out, braille_text)
   end
 end

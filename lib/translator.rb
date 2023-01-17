@@ -7,7 +7,7 @@ class Translator < Dictionary
     super
   end
 
-  def translate(text)
+  def translate_to_braille(text)
     # Converted to downcase for now.
     braille_array = text.downcase.each_char.map do |character|
       text_to_braille[character]
@@ -16,4 +16,6 @@ class Translator < Dictionary
       row.transpose.map(&:join).join("\n")
     end.join("\n\n")
   end
+
+
 end

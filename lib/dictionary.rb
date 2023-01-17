@@ -1,6 +1,6 @@
 class Dictionary
 
-  def letters
+  def dictionary
     {
       "a" => ["0.", "..", ".."],
       "b" => ["0.", "0.", ".."],

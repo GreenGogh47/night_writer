@@ -1,4 +1,5 @@
 require_relative 'translator'
+require_relative 'dictionary'
 
 class NightWriter
   attr_accessor :file_in,
@@ -7,14 +8,16 @@ class NightWriter
   def initialize
     @file_in = ARGV[0]
     @file_out = ARGV[1]
+    @translator = Translator.new
   end
 
   def run
     text_in = File.read(@file_in)
     character_total = text_in.chars.count
-    # create a new instance of translator...
     puts "Created #{@file_out} contains #{character_total} characters"
-    File.write(@file_out, text_in.translate)
+    # create a new instance of translator...
+    braille_text = @translator.translate(text_in)
+    File.write(@file_out, braille_text)
   end
 end
 

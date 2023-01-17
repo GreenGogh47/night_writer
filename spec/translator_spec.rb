@@ -11,6 +11,11 @@ RSpec.describe Translator do
       expect(@translator).to be_a(Translator)
     end
 
+    it 'has attributes' do
+      expect(@file_in).to eq(ARGV[0])
+      expect(@file_out).to eq(ARGV[1])
+    end
+
     # How do I test if it's properly inheriting the prior class?
   end
 

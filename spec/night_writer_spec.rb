@@ -1,20 +1,18 @@
-require 'simplecov'
-SimpleCov.start
-
-require './lib/night_writer'
+require './spec/spec_helper'
 
 RSpec.describe NightWriter do
   before do
     @night_writer = NightWriter.new
   end
 
-  xdescribe '#initialize' do
+  describe '#initialize' do
     it 'exists' do
       expect(@night_writer).to be_a(NightWriter)
     end
-    
-    it 'has attributes' do
 
+    it 'has attributes' do
+      expect(@night_writer.file_in).to eq(ARGV[0])
+      expect(@night_writer.file_out).to eq(ARGV[1])
     end
   end
 end

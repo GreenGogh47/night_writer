@@ -28,7 +28,7 @@ RSpec.describe Translator do
   describe '#translate_from_braille' do
     it 'translates text from braille' do
 			expect(@translator.translate_from_braille("0.\n00\n..")).to eq("h")
-			# expect(@translator.translate_from_braille("0.0.0.0.0.\n00.00.0..0\n....0.0.0.")).to eq("hello")
+			expect(@translator.translate_from_braille("0.0.0.0.0.\n00.00.0..0\n....0.0.0.")).to eq("hello")
 		end
 	end
 end

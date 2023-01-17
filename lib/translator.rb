@@ -18,7 +18,12 @@ class Translator < Dictionary
   end
 
   def translate_from_braille(braille)
-    @braille_to_english[braille.split]
-    # require 'pry'; binding.pry
+    array = []
+    braille.split do |row|
+      array << row.chars.each_slice(2).map(&:join)
+    end
+    braille_letters = array.transpose.map do |letter|
+      @braille_to_english[letter]
+    end.join
   end
 end

@@ -13,10 +13,10 @@ class NightReader
 
   def run
     text_in = File.read(@file_in)
-    character_total = text_in.chars.count
-    puts "Created #{@file_out} contains #{character_total} characters"
-    english_text = @translator.translate_to_braille(text_in)
+    english_text = @translator.translate_to_english(text_in)
+    # english_text = text_in USED FOR READ/WRITE TEST
     File.write(@file_out, english_text)
+    puts "Created #{@file_out} contains #{english_text.length} characters"
   end
 end
 

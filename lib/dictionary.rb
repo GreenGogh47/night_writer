@@ -32,5 +32,7 @@ class Dictionary
       "z" => ["0.", ".0", "00"],
       " " => ["..", "..", ".."]
     }
+    @braille_to_english = text_to_braille.invert
+    require 'pry'; binding.pry
   end
 end

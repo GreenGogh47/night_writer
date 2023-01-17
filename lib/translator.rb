@@ -16,6 +16,4 @@ class Translator < Dictionary
       row.transpose.map(&:join).join("\n")
     end.join("\n\n")
   end
-
-
 end

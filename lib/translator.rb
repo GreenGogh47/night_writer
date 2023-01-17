@@ -16,4 +16,9 @@ class Translator < Dictionary
       row.transpose.map(&:join).join("\n")
     end.join("\n\n")
   end
+
+  def translate_from_braille(braille)
+    @braille_to_english[braille.split]
+    # require 'pry'; binding.pry
+  end
 end

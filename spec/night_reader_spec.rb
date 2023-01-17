@@ -3,6 +3,8 @@ require './spec/spec_helper'
 RSpec.describe NightReader do
   before do
     @night_reader = NightReader.new
+    @night_reader.file_in = './braille_test.txt'
+    @night_reader.file_out = './message50.txt'
   end
 
   describe '#initialize' do
@@ -11,8 +13,8 @@ RSpec.describe NightReader do
     end
 
     it 'has attributes' do
-      expect(@night_reader.file_in).to eq(ARGV[0])
-      expect(@night_reader.file_out).to eq(ARGV[1])
+      expect(@night_reader.file_in).to eq('./braille_test.txt')
+      expect(@night_reader.file_out).to eq('./message50.txt')
     end
   end
 end

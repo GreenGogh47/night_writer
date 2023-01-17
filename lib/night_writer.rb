@@ -15,5 +15,5 @@ class NightWriter
   end
 end
 
-# night_writer = NightWriter.new
-# night_writer.run
+night_writer = NightWriter.new
+night_writer.run

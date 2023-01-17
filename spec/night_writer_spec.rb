@@ -1,7 +1,4 @@
-require 'simplecov'
-SimpleCov.start
-
-require './lib/night_writer'
+require './spec/spec_helper'
 
 RSpec.describe NightWriter do
   before do

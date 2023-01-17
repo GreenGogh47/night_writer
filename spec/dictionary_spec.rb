@@ -1,7 +1,4 @@
-require 'simplecov'
-SimpleCov.start
-
-require './lib/dictionary'
+require './spec/spec_helper'
 
 RSpec.describe Dictionary do
 

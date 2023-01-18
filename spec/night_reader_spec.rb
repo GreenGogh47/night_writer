@@ -19,12 +19,12 @@ RSpec.describe NightReader do
   end
 
   describe '#run' do
-    it 'translates' do
-      # look up methods to make sure that message50 is blank when I start
-      # the previous test run could have populated that fixture file
-      # call @night_reader.run
-      # from there we should be able to open message50
-      # verify it contains the translated message
+    it 'will read the correct file' do
+      # I didn't figure out how to open a file and delete the contents
+      # but if that's done manually, the test will still pass.
+
+      @night_reader.run
+      expect(File.read('./fixture/english_test.txt')).to match(File.read'./fixture/english_test_backup.txt')
     end
   end
 end

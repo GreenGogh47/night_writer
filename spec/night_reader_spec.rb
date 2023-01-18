@@ -21,6 +21,7 @@ RSpec.describe NightReader do
   describe '#run' do
     it 'will read the correct file' do
       # I didn't figure out how to open a file and delete the contents
+      # OF './fixture/english_test.txt'
       # but if that's done manually, the test will still pass.
 
       @night_reader.run

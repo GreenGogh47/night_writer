@@ -23,5 +23,9 @@ RSpec.describe Translator do
 			expect(@translator.translate_from_braille("0.\n00\n..")).to eq("h")
 			expect(@translator.translate_from_braille("0.0.0.0.0.\n00.00.0..0\n....0.0.0.")).to eq("hello")
 		end
+
+    it 'will correctly accept braille from multiple lines' do
+      # expect(@translator.translate_from_braille("0.0.\n..00\n00..\n\n0.0.\n.000\n0...")).to eq("uhoh")
+    end
 	end
 end

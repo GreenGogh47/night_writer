@@ -19,7 +19,7 @@ RSpec.describe NightReader do
   end
 
   describe '#run' do
-    it 'translates and' do
+    it 'translates' do
       # look up methods to make sure that message50 is blank when I start
       # the previous test run could have populated that fixture file
       # call @night_reader.run

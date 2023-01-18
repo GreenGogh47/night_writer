@@ -1,7 +1,7 @@
 require_relative 'translator'
 require_relative 'dictionary'
 
-class NightWriter
+class NightReader
   attr_accessor :file_in,
                 :file_out
 
@@ -13,8 +13,8 @@ class NightWriter
 
   def run
     text_in = File.read(@file_in)
-    braille_text = @translator.translate_to_braille(text_in)
-    File.write(@file_out, braille_text)
-    puts "Created #{@file_out} contains #{text_in.length} characters"
+    english_text = @translator.translate_from_braille(text_in)
+    File.write(@file_out, english_text)
+    puts "Created #{@file_out} contains #{english_text.length} characters"
   end
 end

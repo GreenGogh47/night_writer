@@ -4,29 +4,28 @@ RSpec.describe Translator do
 
   before do
     @translator = Translator.new
-    @input = File.read('./message50.txt')
-    @output = File.read('./braille.txt')
   end
 
   describe '#initialize' do
     it 'exists' do
       expect(@translator).to be_a(Translator)
     end
-
-    it 'has attributes' do
-      expect(@file_in).to eq(ARGV[0])
-      expect(@file_out).to eq(ARGV[1])
-    end
-
-    # How do I test if it's properly inheriting the prior class?
   end
 
-  describe '#translate' do
+  describe '#translate_to_braille' do
     it "translates a character from english to braille" do
-      expect(@translator.translate(@input)).to eq(@output)
-      expect(@translator.translate("a")).to eq("0.\n..\n..")
-      expect(@translator.translate("b")).to eq("0.\n0.\n..")
-      expect(@translator.translate("ab")).to eq("0.0.\n..0.\n....")
+      expect(@translator.translate_to_braille("hello")).to eq("0.0.0.0.0.\n00.00.0..0\n....0.0.0.")
     end
   end
+
+  describe '#translate_from_braille' do
+    it 'translates text from braille' do
+			expect(@translator.translate_from_braille("0.\n00\n..")).to eq("h")
+			expect(@translator.translate_from_braille("0.0.0.0.0.\n00.00.0..0\n....0.0.0.")).to eq("hello")
+		end
+
+    it 'will correctly accept braille from multiple lines' do
+      # expect(@translator.translate_from_braille("0.0.\n..00\n00..\n\n0.0.\n.000\n0...")).to eq("uhoh")
+    end
+	end
 end
